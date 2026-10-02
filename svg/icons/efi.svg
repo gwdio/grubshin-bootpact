@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Icon for the "UEFI Firmware Settings" entry: a slime from the game. The eyes use the background color so they look
+like holes in the body. -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="efi-logo"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <path
+     id="body"
+     class="bright-fill"
+     d="M 50,20 C 79,20 96,52 96,71 C 96,85 79,90 50,90 C 21,90 4,85 4,71 C 4,52 21,20 50,20 Z" />
+  <ellipse id="eye-left" class="background-fill" cx="36" cy="60" rx="5.5" ry="9.5" />
+  <ellipse id="eye-right" class="background-fill" cx="64" cy="60" rx="5.5" ry="9.5" />
+</svg>
