@@ -10,7 +10,7 @@ A GRUB theme inspired by Genshin Impact's teleportation loading screen.
 - A font from the game
 - The boot countdown is an elemental loading bar from the game
 - Icon set of several Linux Distribution's logos, recolored to fit in with the vibe of the region icons in game.
-- Support for 1080p and 720p monitors
+- Support for 1600p, 1440p, 1080p and 720p monitors
 
 ## Showcase
 

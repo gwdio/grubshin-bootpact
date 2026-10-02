@@ -11,6 +11,8 @@
 in
   lib.flip lib.mapAttrs resoltions (resolution: {
     menu,
+    # Puts the start of the boot entry label in a nice spot relative to the tip text below it
+    menuCenterOffsetLeft ? 300,
     line,
     elements,
     fonts,
@@ -46,10 +48,7 @@ in
         terminal-width = percent 100;
         terminal-height = percent 100;
       };
-      components = let
-        # Puts the start of the boot entry label in a nice spot relative to the tip text below it
-        menuCenterOffsetLeft = 300;
-      in
+      components =
         [
           (mkComponent "boot_menu" (menu
             // layout.menu

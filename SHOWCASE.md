@@ -33,7 +33,8 @@ only difference is that it is implemented in Nix and not python.
 | `nix build` | Common name |
 |-------------|-------------|
 | 1280x720    | 720p        |
-| 1980x1080   | 1080p       |
+| 1920x1080   | 1080p       |
+| 2560x1600   | WQXGA       |
 
 > [!TIP]
 > The only difference between the resolutions is the size of some items, such as the icons, logo and the font. Pick
@@ -41,6 +42,8 @@ only difference is that it is implemented in Nix and not python.
 >
 > The 720p theme is meant for smaller screens so that more entries fit in the Classic layout and the Teleport layout
 > looks closer to the sizes in game.
+>
+> The 2560x1600 theme is also sized to fit 2560x1440 (1440p) screens, so use it if your firmware only offers 1440p.
 
 ## Colorschemes
 
