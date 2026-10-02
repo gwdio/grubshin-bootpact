@@ -9,4 +9,5 @@
 in {
   classic = import ./classic {inherit lib hywenhei-extended-font component grubTheme colors colorscheme;};
   teleport = import ./teleport {inherit lib hywenhei-extended-font component grubTheme colors colorscheme;};
+  secure-boot = import ./secure-boot {inherit lib hywenhei-extended-font component grubTheme colors colorscheme;};
 }

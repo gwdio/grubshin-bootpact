@@ -55,10 +55,11 @@ only difference is that it is implemented in Nix and not python.
 
 ## Layouts
 
-| `nix build` | Name         | Description                                                                                |
-|-------------|--------------|--------------------------------------------------------------------------------------------|
-| classic     | **Classic**  | A touched up version of the 0.0.1 look. Very convenient to use with multiple boot entries. |
-| teleport    | **Teleport** | Very similar to classic, but mimics the teleport loading screen a lot better.              |
+| `nix build` | Name            | Description                                                                                |
+|-------------|-----------------|--------------------------------------------------------------------------------------------|
+| classic     | **Classic**     | A touched up version of the 0.0.1 look. Very convenient to use with multiple boot entries. |
+| teleport    | **Teleport**    | Very similar to classic, but mimics the teleport loading screen a lot better.              |
+| secure-boot | **Secure Boot** | A mix of teleport and classic that does not need font files. See the note below.           |
 
 > [!WARNING]
 > Due to a bug in GRUB, the Teleport layout may be laggy. This is caused by the Teleport layout, and the only fix is
@@ -67,6 +68,12 @@ only difference is that it is implemented in Nix and not python.
 > The cause of the issue is the presence of multiple (2) `boot_menu` components. GRUB doesn't handle this well. The
 > first boot menu is the central image, and the second one is located above the "Use up and down keys to select an
 > entry" text. During startup, you don't see that boot menu because it is covered by the "Booting in ..." countdown.
+
+> [!NOTE]
+> With Secure Boot enabled, GRUB may refuse to load the theme's fonts and fall back to its own 16px font. The
+> Secure Boot layout is made for this: the selected entry's icon is shown big like in Teleport, with a list of all entries
+> under it like in Classic, and all text uses whatever font GRUB has. Entries without an icon show a slime instead of
+> nothing. It uses 2 `boot_menu` components like Teleport, so the lag described above applies to it as well.
 
 ## Screenshots
 
