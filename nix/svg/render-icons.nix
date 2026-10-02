@@ -7,6 +7,7 @@
   src,
   width ? null,
   height ? null,
+  background ? null,
 }:
 stdenv.mkDerivation {
   inherit src;
@@ -14,7 +15,7 @@ stdenv.mkDerivation {
   buildInputs = [resvg];
   buildPhase = let
     args = lib.cli.toGNUCommandLineShell {} {
-      inherit width height stylesheet;
+      inherit width height stylesheet background;
     };
   in ''
     mkdir -p "$out"

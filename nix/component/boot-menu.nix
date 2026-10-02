@@ -6,6 +6,8 @@
 }: {
   icons ? null,
   iconSize ? null,
+  # Render the icons on a solid background so they fully cover anything drawn behind them
+  opaqueIcons ? false,
   itemBox ? null,
   selectedItemBox ? null,
 }: {
@@ -28,6 +30,10 @@
       src = icons;
       width = iconSize;
       height = iconSize;
+      background =
+        if opaqueIcons
+        then colors.background
+        else null;
     }))
     ++ (lib.optional (itemBox != null)
       (renderBox {
